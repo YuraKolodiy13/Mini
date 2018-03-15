@@ -1,0 +1,182 @@
+.about{
+  position: relative;
+}
+.about::after{
+  content: "";
+  position: absolute;
+  z-index: 10;
+  width: 100%;
+  height: 60px;
+  bottom: -59px;
+  background-color: #fff;
+  clip-path: polygon(0 0, 100% 0, 0 100%);
+}
+.about__wrapper{
+  max-width: 1170px;
+  margin: auto;
+  padding: 100px 0;
+}
+.title{
+  display: flex;
+  align-items: center;
+  width: 90%;
+  margin: 0 auto 150px;
+  box-sizing: border-box;
+  color: #4c4c4c;
+  line-height: 25px;
+}
+.title h3{
+  position: relative;
+  font-size: 30px;
+  line-height: 36px;
+  margin-right: 25px;
+  padding-right: 25px;
+  text-transform: uppercase;
+  color: #0d0d0d;
+}
+.title h3::after{
+  content: '';
+  position: absolute;
+  right: 0;
+  top: -5px;
+  width: 4px;
+  height: 45px;
+  background-color: #f39c12;
+}
+
+.about__content--wrap{
+  display: flex;
+  justify-content: space-between;
+}
+.about__content--story{
+  display: flex;
+  justify-content: space-between;
+  width: 55%;
+}
+.about__content--wrap h5{
+  font-size: 20px;
+  line-height: 25px;
+  color: #0d0d0d;
+  text-transform: uppercase;
+  margin: 10px 0;
+}
+.about__content--wrap h6{
+  font-size: 20px;
+  line-height: 28px;
+  color: #e74c3c;
+  font-weight: lighter;
+  margin: 10px 0 25px;
+}
+.about__content--wrap p{
+  font-size: 16px;
+  line-height: 28px;
+  color: #737373;
+  font-weight: lighter;
+}
+.about__img--story{
+  width: 40%;
+}
+.story__img,
+.skills__img{
+  width: 120px;
+  height: 120px;
+  border: 2px solid #f39c12;
+  border-radius: 50%;
+  margin-right: 20px;
+  position: relative;
+  cursor: pointer;
+  transition: .5s;
+  flex: none;
+}
+.story__img::before{
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: url("../img/sprite1.png") no-repeat -9px -547px;
+  width: 30px;
+  height: 45px;
+  transition: .2s;
+}
+.story__img:hover{
+  background-color: #f39c12;
+  transition: .5s;
+}
+.story__img:hover::before{
+  background-position: -9px -607px;
+  transition: .2s;
+}
+hr{
+  border: none;
+  height: 2px;
+  background-color: #e6e6e6;
+  margin: 100px 0;
+}
+
+.about__content--skills{
+  width: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+}
+.about__img--skills{
+  width: 45%;
+}
+.skills__img::before{
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: url("../img/sprite1.png") no-repeat -9px -847px;
+  width: 35px;
+  height: 40px;
+  transition: .2s;
+}
+.skills__img:hover{
+  background-color: #f39c12;
+  transition: .5s;
+}
+.skills__img:hover::before{
+  background-position: -9px -898px;
+  transition: .2s;
+}
+.skills__descrip{
+  width: 70%;
+}
+.skills{
+  width: 100%;
+}
+.skills__progress{
+  height: 10px;
+  background-color: #e6e6e6;
+}
+.skills__line{
+  height: 10px;
+  background-color: #f39c12;
+  width: 0;
+  transition: 1s;
+}
+
+
+.skills .skills__name{
+  font-size: 16px;
+  line-height: 28px;
+  color: #0d0d0d;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.skills .skills__name span{
+  font-weight: 100;
+  position: relative;
+  padding-left: 10px;
+}
+.skills .skills__name span::before{
+  content: '/';
+  position: absolute;
+  left: 0;
+}
+.skills__item{
+  margin-bottom: 25px;
+}

@@ -1,0 +1,102 @@
+.services{
+  max-width: 1170px;
+  margin: auto;
+  padding: 100px 0;
+}
+.service__content{
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+.service__item{
+  width: 30%;
+}
+.service__img{
+  width: 105px;
+  height: 105px;
+  border: 2px solid #f39c12;
+  border-radius: 50%;
+  margin: auto;
+  position: relative;
+}
+.service__img:hover{
+  background-color: #f39c12;
+  transition: .5s;
+}
+.service__img::after{
+  content: '';
+  width: 36px;
+  height: 36px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: url("../img/sprite1.png") no-repeat -4px -1049px;
+  transition: .2s;
+}
+.service__img:hover::after{
+  background-position: -4px -1094px;
+}
+.service__item:nth-child(2) .service__img::after{
+  background-position: -7px -495px;
+  transition: .2s;
+}
+.service__item:nth-child(3) .service__img::after{
+  background-position: -5px -1315px;
+  transition: .2s;
+}
+.service__item:nth-child(2) .service__img:hover::after{
+  background-position: -7px -445px;
+  transition: .2s;
+}
+.service__item:nth-child(3) .service__img:hover::after{
+  background-position: -5px -1365px;
+  transition: .2s;
+}
+.service__name,
+.pricing__name{
+  font-size: 20px;
+  line-height: 25px;
+  font-weight: bold;
+  color: #0d0d0d;
+  text-transform: uppercase;
+  margin-top: 20px;
+}
+.service__content p,
+.pricing__packege p{
+  color: #737373;
+}
+
+.pricing{
+  display: flex;
+  justify-content: space-between;
+}
+.pricing__packege{
+  width: 25%;
+  text-align: left;
+}
+.pricing__img{
+  width: 127px;
+  height: 127px;
+  border: 2px solid #f39c12;
+  border-radius: 50%;
+  position: relative;
+}
+.pricing__img:hover{
+  background-color: #f39c12;
+  transition: .5s;
+}
+.pricing__img::after{
+  content: '';
+  width: 36px;
+  height: 36px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: url("../img/sprite1.png") no-repeat -8px -8px;
+  transition: .2s;
+}
+.pricing__img:hover::after{
+  background-position: -8px -61px;
+}

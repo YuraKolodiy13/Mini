@@ -1,10 +1,14 @@
 .background{
   background: url("../img/quote.jpg") no-repeat;
   background-size: cover;
-  padding: 150px 0;
+  //padding: 150px 0;
   color: #ffffff;
   text-align: center;
   position: relative;
+  min-height: 700px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .background::before{
   content: "";
@@ -40,6 +44,7 @@
   position: relative;
   margin: auto;
   max-width: 1170px;
+  width: 100%;
 }
 .background h3{
   font-family: 'Myriad Pro', Arial, sans-serif;
@@ -84,9 +89,7 @@
   height: 4px;
   background-color: #f39c12;
 }
-.quote{
-  padding: 200px 0;
-}
+
 .facts__items{
   display: flex;
   justify-content: space-between;

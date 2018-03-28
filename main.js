@@ -20,3 +20,15 @@ function showProgress() {
     }
 }
 window.addEventListener('scroll', showProgress);
+
+
+$(function () {
+    $('.tabs a').click(function () {
+        $(this).parents('.tab__wrapper').find('.tabCont').addClass('hide');
+        $(this).parent().siblings().removeClass('active');
+        var id = $(this).attr('href');
+        $(id).removeClass('hide');
+        $(this).parent().addClass('active');
+        return false;
+    });
+});

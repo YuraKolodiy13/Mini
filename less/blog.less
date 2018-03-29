@@ -1,0 +1,92 @@
+.blog{
+  padding: 100px 0;
+  max-width: 1170px;
+  margin: auto;
+}
+.blog__posts{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.posts__item{
+  width: 48%;
+  margin-bottom: 50px;
+}
+.posts__item img{
+  max-width: 100%;
+  height: auto;
+  transition: .5s;
+  display: block;
+}
+.posts__img:hover img{
+  transform: scale(1.2);
+}
+.posts__img{
+  position: relative;
+  overflow: hidden;
+}
+.posts__link{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  cursor: pointer;
+}
+.posts__content{
+  width: 75%;
+  margin-left: auto;
+  background-color: #fff;
+  position: relative;
+  top: -60px;
+  padding: 20px;
+}
+.posts__content h4{
+  font-size: 20px;
+  line-height: 25px;
+  text-transform: uppercase;
+  color: #0d0d0d;
+  font-weight: bold;
+  margin: 0 0 30px;
+  cursor: pointer;
+  transition: .5s;
+}
+.posts__item:hover .posts__content h4{
+  color: #f39c12;
+}
+.posts__content p{
+  font-size: 16px;
+  line-height: 28px;
+  color: #737373;
+  margin-bottom: 30px;
+}
+.posts__comment{
+  font-size: 14px;
+  line-height: 24px;
+  color: #808080;
+  letter-spacing: -.02em;
+  position: absolute;
+  top: 80px;
+  left: -100px;
+  text-align: right;
+}
+.posts__comment span{
+  display: block;
+}
+.posts__icon{
+  width: 44px;
+  height: 44px;
+  background-color: #f39c12;
+  position: absolute;
+  top: 16px;
+  left: -44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 21px;
+  color: #ffffff;
+}
+.posts .btn{
+  width: 105px;
+  font-size: 13px;
+}

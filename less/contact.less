@@ -1,0 +1,131 @@
+.contact{
+  padding: 100px 0;
+  max-width: 1170px;
+  margin: auto;
+}
+.contact__form{
+  display: flex;
+  justify-content: space-between;
+}
+form{
+  width: 57%;
+}
+form input,
+form textarea{
+  width: 100%;
+  border: 2px solid #d8d8d8;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  padding: 13px 18px;
+  transition: .5s;
+}
+form input:hover,
+form textarea:hover{
+  border-color: #f2ce96;
+}
+form input:focus,
+form textarea:focus{
+  border-color: #f39c12;
+  outline: none;
+}
+form label,
+form .wrap{
+  position: relative;
+}
+form input,
+form textarea{
+  font-size: 16px;
+  font-family: 'Open Sans', sans-serif;
+}
+textarea{
+  resize: vertical;
+}
+form span{
+  position: absolute;
+  right: 30px;
+  top: 2px;
+  width: 20px;
+  height: 20px;
+  background: url("../img/sprite2.png") no-repeat -8px -252px;
+  transition: .5s;
+}
+form input:hover + span,
+form input:focus + span{
+  background-position: -8px -291px;
+}
+form .wrap span{
+  top: 20px;
+  background-position: -8px -141px;
+}
+form textarea:hover + span,
+form textarea:focus + span{
+  background-position: -8px -180px;
+}
+form input[type='email'] + span{
+  background-position: -8px -74px;
+}
+form input[type='email']:hover + span,
+form input[type='email']:focus + span{
+  background-position: -8px -105px;
+}
+::-webkit-input-placeholder {color:#808080; font-size: 15px; font-family: 'Open Sans', sans-serif;}
+::-moz-placeholder          {color:#808080; font-size: 15px; font-family: 'Open Sans', sans-serif;}/* Firefox 19+ */
+:-moz-placeholder           {color:#808080; font-size: 15px; font-family: 'Open Sans', sans-serif;}/* Firefox 18- */
+:-ms-input-placeholder      {color:#808080; font-size: 15px; font-family: 'Open Sans', sans-serif;}
+.form .btn{
+  width: 108px;
+  font-size: 14px;
+}
+
+.form__info{
+  width: 37%;
+}
+.form__title{
+  font-size: 20px;
+  line-height: 32px;
+  font-weight: bold;
+  color: #0d0d0d;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+.form__info p{
+  line-height: 28px;
+  color: #737373;
+  margin-bottom: 30px;
+}
+.form__info span{
+  line-height: 25px;
+  color: #0d0d0d;
+  letter-spacing: -.02em;
+  display: block;
+  position: relative;
+  padding-left: 50px;
+  margin-bottom: 20px;
+}
+.form__info span::before{
+  content: '';
+  width: 34px;
+  height: 34px;
+  border: 2px solid #f39b12;
+  box-sizing: border-box;
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background: url("../img/sprite2.png") no-repeat;
+  transition: .5s;
+}
+.form__info .form__address::before{
+  background-position: 0 -36px;
+}
+.form__info .form__phone::before{
+  background-position: -3px -211px;
+}
+.form__info .form__email::before{
+  background-position: -2px -1px;
+}
+.form__info span:hover::before{
+  transform: translateY(-50%) scale(1.1);
+}
+

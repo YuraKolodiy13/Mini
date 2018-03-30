@@ -15,6 +15,8 @@
   border-top: 4px solid transparent;
   padding: 25px 20px;
   box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
 }
 .team__member:hover{
   background-color: #f0f0f0;
@@ -22,15 +24,15 @@
   transition: .5s;
 }
 .member__img{
-  border: 1px solid #e9e9e9;
   padding: 5px;
-  border-radius: 50%;
   display: inline-block;
-  background-color: #f2f2f2;
   margin-bottom: 20px;
+  flex: none;
 }
 .member__img img{
   vertical-align: top;
+  border: 1px solid #e9e9e9;
+  border-radius: 50%;
 }
 .member__name{
   font-size: 20px;
@@ -67,9 +69,12 @@
 .social{
   width: 70%;
   margin: auto;
-  height: 25px;
+  //height: 25px;
   display: flex;
   justify-content: space-between;
+  flex: 1;
+  height: 100%;
+  align-items: flex-end;
 }
 .social__btn{
   background: url("../img/sprite1.png") no-repeat;

@@ -1,5 +1,5 @@
 .blog{
-  padding: 100px 0;
+  padding: 100px 0 50px;
   max-width: 1170px;
   margin: auto;
 }
@@ -10,11 +10,12 @@
 }
 .posts__item{
   width: 48%;
-  margin-bottom: 50px;
+  margin-bottom: 10px;
 }
 .posts__item img{
   max-width: 100%;
-  height: auto;
+  height: 300px;
+  width: 100%;
   transition: .5s;
   display: block;
 }
@@ -51,7 +52,8 @@
   cursor: pointer;
   transition: .5s;
 }
-.posts__item:hover .posts__content h4{
+.posts__content h4:hover,
+.posts__img:hover + .posts__content h4{
   color: #f39c12;
 }
 .posts__content p{

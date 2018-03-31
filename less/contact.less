@@ -10,62 +10,58 @@
 form{
   width: 57%;
 }
-form input,
-form textarea{
+.form__field{
   width: 100%;
-  border: 2px solid #d8d8d8;
   box-sizing: border-box;
   margin-bottom: 10px;
-  padding: 13px 18px;
   transition: .5s;
-}
-form input:hover,
-form textarea:hover{
-  border-color: #f2ce96;
-}
-form input:focus,
-form textarea:focus{
-  border-color: #f39c12;
-  outline: none;
-}
-form label,
-form .wrap{
   position: relative;
 }
-form input,
-form textarea{
+.form__control{
   font-size: 16px;
   font-family: 'Open Sans', sans-serif;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 13px 60px 13px 25px;
+  display: block;
+  border: 2px solid #d8d8d8;
 }
-textarea{
-  resize: vertical;
+.form__control:hover{
+  border-color: #f2ce96;
 }
-form span{
+.form__control:focus{
+  outline: none;
+  border-color: #f39c12;
+}
+textarea.form__control{
+  min-height: 125px;
+  resize: none;
+}
+form .form__icon{
   position: absolute;
   right: 30px;
-  top: 2px;
+  top: 15px;
   width: 20px;
   height: 20px;
   background: url("../img/sprite2.png") no-repeat -8px -252px;
   transition: .5s;
 }
-form input:hover + span,
-form input:focus + span{
+.form__control:hover + .form__icon,
+.form__control:focus + .form__icon{
   background-position: -8px -291px;
 }
-form .wrap span{
-  top: 20px;
+textarea.form__control + .form__icon{
   background-position: -8px -141px;
 }
-form textarea:hover + span,
-form textarea:focus + span{
+textarea.form__control:hover + .form__icon,
+textarea.form__control:focus + .form__icon{
   background-position: -8px -180px;
 }
-form input[type='email'] + span{
+form input[type='email'] + .form__icon{
   background-position: -8px -74px;
 }
-form input[type='email']:hover + span,
-form input[type='email']:focus + span{
+form input[type='email']:hover + .form__icon,
+form input[type='email']:focus + .form__icon{
   background-position: -8px -105px;
 }
 ::-webkit-input-placeholder {color:#808080; font-size: 15px; font-family: 'Open Sans', sans-serif;}
@@ -75,6 +71,7 @@ form input[type='email']:focus + span{
 .form .btn{
   width: 108px;
   font-size: 14px;
+  margin-top: 10px;
 }
 
 .form__info{
@@ -89,11 +86,16 @@ form input[type='email']:focus + span{
   margin-bottom: 30px;
 }
 .form__info p{
+  margin-top: -8px;
   line-height: 28px;
   color: #737373;
   margin-bottom: 30px;
 }
-.form__info span{
+.form__info ul{
+  padding: 0;
+  list-style: none;
+}
+.form__info li{
   line-height: 25px;
   color: #0d0d0d;
   letter-spacing: -.02em;
@@ -102,7 +104,7 @@ form input[type='email']:focus + span{
   padding-left: 50px;
   margin-bottom: 20px;
 }
-.form__info span::before{
+.form__info li::before{
   content: '';
   width: 34px;
   height: 34px;
@@ -116,6 +118,14 @@ form input[type='email']:focus + span{
   background: url("../img/sprite2.png") no-repeat;
   transition: .5s;
 }
+.form__info a{
+  color: #0d0d0d;
+  text-decoration: none;
+  transition: .5s;
+}
+.form__info a:hover{
+  color: #f39b12;
+}
 .form__info .form__address::before{
   background-position: 0 -36px;
 }
@@ -125,7 +135,7 @@ form input[type='email']:focus + span{
 .form__info .form__email::before{
   background-position: -2px -1px;
 }
-.form__info span:hover::before{
+.form__info li:hover::before{
   transform: translateY(-50%) scale(1.1);
 }
 

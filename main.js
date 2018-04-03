@@ -31,15 +31,28 @@ $(function () {
         $(this).parent().addClass('active');
         return false;
     });
+
+    $('.sliderTop__items').slick({
+        arrows: false,
+        dots: true
+    });
+
+    $('.sliderBottom__items').slick({
+        dots: true,
+        vertical: true,
+        appendArrows: '.sliderBottom__btn',
+        nextArrow: '<button type="button" class="slick-next"><i class="fas fa-chevron-right"></i></button>',
+        prevArrow: '<button type="button" class="slick-next"><i class="fas fa-chevron-left"></i></button>'
+    })
 });
 
 //map
 function initMap() {
-    let coordinates = {lat: 47.212325, lng: 38.933663},
+    let coordinates = {lat: 51.473987, lng: -0.061018},
 
         map = new google.maps.Map(document.getElementById('map'), {
             center: coordinates,
-            zoom: 17,
+            zoom: 15,
             scrollwheel: false
         });
 
@@ -48,6 +61,25 @@ function initMap() {
         marker = new google.maps.Marker({
             position: coordinates,
             map: map,
-            icon: image
+            icon: image,
+            animation: google.maps.Animation.DROP
         });
+
+    $.getJSON("map.json", function(data) {
+        map.setOptions({styles: data});
+    });
+    //
+    // let popupContent = '<p class="content">Что угодно</p>';
+    // let infowindow = new google.maps.InfoWindow({
+    //     content: popupContent
+    // });
+    //
+    // infowindow.open(map, marker);
+    // marker.addListener('click', function() {
+    //     infowindow.open(map, marker);
+    // });
+    //
 }
+
+
+
